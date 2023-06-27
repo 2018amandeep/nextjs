@@ -1,13 +1,19 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1>Hi This is the welcome page</h1>
-        <p>
-          This is the paragraph to show the paragraph. Thanks & Regards
-        </p>
-      </div>
-     
-    </main>
-  )
+import Feed from '../components/Feed'
+import Form from '../components/Form'
+
+const Home = () =>{
+    return (
+        <section className="w-full flex-center flex-col">
+            {/* <h1 className="head_text text_center">
+                Discover & Share
+                <br className="max-md:hidden" />
+                <span className="orange_gradient text_center">AI-Powered Prompts</span>
+            </h1> */}
+            {/* <p className="desc text-center">Prompotial is a AI based Open source tool for modern world to discover, create, and share creative prompts</p> */}
+            {/* <Feed /> */}
+            <Form/>
+        </section>
+    )
 }
+
+export default Home;
