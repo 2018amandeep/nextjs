@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background-color: #dfdfe4;
+}
+
+.table_header{
+    /* width: 100%;
+    height: 10%;
+    
+    padding: .8rem 1rem;*/
+    color: #f0f0f0; 
+    background-color: blue;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* font-weight: bold; */
+    font: normal 24px 'ralewayregular';
+    padding: 17px 0 17px 15px;
+}
+
+.table_body{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fff;
+    margin: .8rem auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+} */
+
+.table{
+    width: 97%;
+    float: left;
+    padding: 0 1.5% 15px;
+    font-size: 13px;
+    color: #4a4a4e;
+    /* overflow: hidden; */
+}
+
+.th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #0303e9;
+    border: 0.5px solid rgb(77, 75, 75);
+}
+
+.tr{
+    border: 0.5px solid rgb(77, 75, 75);
+    list-style-type: none;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #979797; */
+    height: 2vh;
+    width: 100%;
+    /* border-left:  1px solid #979797; */
+    /* display: list-item; */
+    /* text-align: -webkit-match-parent; */
+    /* float: left; */
+}
+
+.tr-even:nth-child(even){
+    background-color: #f0f0f0;
+
+}
+
+.dataType{
+    margin: 10px 0 5px 0  ;
+    padding: 20px;
+}
+
+.dataType span{
+    margin-left: 20px;
+}
+
+.date{
+    margin: 10px 100px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.date input{
+    margin-right: 30px;
+    height: 5vh;
+    width: 15vw;
+}
+
+.date span{
+    margin-right: 8px;
+}
+
+.date button{
+    height: 5vh;
+    width: 8vw;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #dfdfe4;
+    background-color: #0303e9;
+    border: none;
+}
+
+.data{
+    margin: 10px;
+    padding: 5px;
+}
+
+.data span{
+    margin-right: 30px;
+    margin-left: 30px;
+}

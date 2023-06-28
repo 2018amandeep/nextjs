@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import '../styles/formStyle.css'
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -102,10 +103,16 @@ const Form: React.FC<Props> = ({
 
     return (
         <>
+            
+        <div className='main'>
+        <section className='table_header'>
             <h1>POLICY DETAILS</h1>
+            </section>
+            
 
-            <div>
+            <div className='dataType'>
                 <span>Choose data type from list</span>
+                
                 <FormControl sx={{ m: 1, minWidth: 280 }}>
                     <Select
                           labelId="demo-simple-select-helper-label"
@@ -127,35 +134,44 @@ const Form: React.FC<Props> = ({
                         ))}
                     </Select>
                 </FormControl>
-
+            </div>
+            <div className='date'>
+                <span>From Date</span><input type='date' placeholder='From Date' />
+                <span>To Date</span><input type='date' placeholder='To Date' />
+                <button type='button'> SUBMIT</button>
+            </div>
+            <div className='data'>
+                <span>NOP(no. of policies): 65</span>
+                <span>Total Premium(INR): 1967384</span>
             </div>
 
-
+            <section className='table_body'>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
-                    <Table stickyHeader aria-label="sticky table">
-                        <TableHead>
-                            <TableRow>
+                    <Table stickyHeader aria-label="sticky table" className='table'>
+                        <TableHead >
+                            <TableRow className='th'>
                                 {columns.map((column) => (
                                     <TableCell
                                         key={column.id}
                                         align={column.align}
                                         style={{ minWidth: column.minWidth }}
+                                        className='th'
                                     >
                                         {column.label}
                                     </TableCell>
                                 ))}
                             </TableRow>
                         </TableHead>
-                        <TableBody>
+                        <TableBody className='tbody'>
                             {rows
                                 .map((row) => {
                                     return (
-                                        <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                                        <TableRow hover role="checkbox" tabIndex={-1} key={row.code} className='tr-even'>
                                             {columns.map((column) => {
                                                 const value = row[column.id];
                                                 return (
-                                                    <TableCell key={column.id} align={column.align}>
+                                                    <TableCell key={column.id} align={column.align} className='tr'>
                                                         {column.format && typeof value === 'number'
                                                             ? column.format(value)
                                                             : value}
@@ -170,6 +186,8 @@ const Form: React.FC<Props> = ({
                 </TableContainer>
 
             </Paper>
+            </section>
+        </div>
         </>
     )
 }
